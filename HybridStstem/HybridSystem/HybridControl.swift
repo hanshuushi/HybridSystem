@@ -22,7 +22,67 @@ func getValueFromData<T>(data:AnyObject!, key:String, defVal:T) -> T {
     return defVal
 }
 
-class HybridControl {
+private class HybridControlNotificationManager {
+    static let shareInstance:HybridControlNotificationManager = HybridControlNotificationManager()
+    
+    class Notification : NSObject {
+        unowned let control:HybridControl
+        
+        let name:String
+        
+        init(_name:String, _control:HybridControl) {
+            name = _name;
+            
+            control = _control
+        }
+    }
+    
+    var notifications = Array<Notification>()
+    
+    func registerHandler(name:String, control:HybridControl) {
+        notifications.append(Notification(_name: name, _control: control))
+    }
+    
+    func removeObjectFromNotifications (item:Notification) {
+        if let index = notifications.indexOf(item) {
+            notifications.removeAtIndex(index)
+        }
+    }
+    
+    func removeHandler(handlerName name:String) {
+        for notification in notifications {
+            if notification.name == name {
+                removeObjectFromNotifications (notification)
+            }
+        }
+    }
+    
+    func removeHandler(hybridControl control:HybridControl) {
+        for notification in notifications {
+            if notification.control == control {
+                removeObjectFromNotifications (notification)
+            }
+        }
+    }
+    
+    func removeHandler(handlerName name:String, hybridControl control:HybridControl) {
+        for notification in notifications {
+            if notification.name == name  && notification.control == control  {
+                removeObjectFromNotifications (notification)
+            }
+        }
+    }
+    
+    func callHandler(name:String, data:AnyObject) {
+        for notification in notifications {
+            if notification.name == name {
+                notification.control.callHandler(name, data: data)
+            }
+        }
+    }
+}
+
+class HybridControl : NSObject {
     
     // MARK:- Basic URL
     static var BasicUrl:String = ""
@@ -32,12 +92,17 @@ class HybridControl {
     
     let bridge:WebViewJavascriptBridge
     
+    deinit {
+        HybridControlNotificationManager.shareInstance.removeHandler(hybridControl: self)
+    }
+    
     init(_webViewController:HybridWebViewController) {
         
         webViewController = _webViewController
         
         bridge = WebViewJavascriptBridge(forWebView: webViewController.webView)
         
+        super.init()
         // Register Handler
         
         // Register Push & Pop
@@ -119,8 +184,44 @@ class HybridControl {
             })
         }
         
-        bridge.setWebViewDelegate(self.webViewController)
+        // Register Handler
+        bridge.registerHandler("LHS-RegisterHandler") { [unowned self](data, callBack) in
+            guard let name = data as? String else {
+                return
+            }
+            
+            HybridControlNotificationManager.shareInstance.registerHandler(name, control: self)
+        }
         
+        // Call Handler
+        bridge.registerHandler("LHS-CallHandler") { (data, callBack) in
+            guard let dict = data as? [String:AnyObject] else {
+                return
+            }
+            
+            guard let name = dict["name"] as? String else {
+                return
+            }
+            
+            let postData = data as? NSObject
+            
+            HybridControlNotificationManager.shareInstance.callHandler(name, data: postData ?? "")
+        }
+        
+        // Remove Handler
+        bridge.registerHandler("LHS-RemoveHandler") { [unowned self](data, callBack) in
+            guard let name = data as? String else {
+                return
+            }
+            
+            HybridControlNotificationManager.shareInstance.removeHandler(handlerName: name, hybridControl: self)
+        }
+        
+        bridge.setWebViewDelegate(self.webViewController)
+    }
+    
+    func callHandler(name:String, data:AnyObject) {
+        bridge.callHandler("LHS-CallHandlerToJS", data: ["name":name, "data":data])
     }
     
     // MARK:- ViewController

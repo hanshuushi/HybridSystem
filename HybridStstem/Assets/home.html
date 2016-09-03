@@ -13,6 +13,7 @@
 	<li onclick="light()">Light Statusbar Style</li>
 	<li onclick="hide()">Hide Statusbar Style</li>
 	<li onclick="present()">Present New Controller</li>
+	<li onclick="register()">Register & Call Handler </li>
 </ul>
 </body>
 </html>
@@ -36,6 +37,10 @@ function hide() {
 
 function present() {
 	HybridControl.present("present.html")
+}
+
+function register() {
+	HybridControl.push("registerHandler.html")
 }
 
 var ready = function(){
