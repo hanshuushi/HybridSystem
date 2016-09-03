@@ -83,6 +83,7 @@ setupWebViewJavascriptBridge(function(bridge) {
 	HybridControl.handlerCollection = {}
 
 	bridge.registerHandler("LHS-CallHandlerToJS", function(data, callBack) {
+
 		var name = data.name
 
 		var postData = data.data
@@ -93,6 +94,7 @@ setupWebViewJavascriptBridge(function(bridge) {
 	})
 
 	HybridControl.registerHandler = function(name, handler) {
+
 		HybridControl.handlerCollection[name] = handler
 
 		bridge.callHandler("LHS-RegisterHandler", name)
@@ -108,6 +110,10 @@ setupWebViewJavascriptBridge(function(bridge) {
 		delete HybridControl.handlerCollection[name]
 
 		bridge.callHandler("LHS-RemoveHandler", name)
+	}
+
+	if (HybridControl.ready) {
+		HybridControl.ready()
 	}
 
 })

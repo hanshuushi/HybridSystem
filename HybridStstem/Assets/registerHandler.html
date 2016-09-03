@@ -10,19 +10,35 @@
 <body>
 
 <ul>
-	<li>Select Your Language<span>English</span><label id="language" class="arrow" /></li>
+	<li onclick="language()">Select Your Language<span id="language"></span><label class="arrow" /></li>
 	<li class="line"></li>
-	<li>Select Your Country<span>USA</span><label id="country" class="arrow" /></li>
+	<li>Select Your Country<span id="country" >USA</span><label class="arrow" /></li>
 </ul>
 
 </body>
 </html>
 
 <script type="text/javascript">
-function pop() {
-	// body...
-	HybridControl.registerHandler ("Language", function(data) {
+	var languageNode = document.getElementById("language")
 
-	})
-}
+	var countryNode = document.getElementById("country")
+
+	languageNode.innerHTML = "English";
+
+	countryNode.innerHTML = "USA";
+
+
+	// HybridControl.registerHandler ("Country", function(data) {
+	// 	countryNode.innerHTML = data;
+	// })
+
+	HybridControl.ready = function(){
+		HybridControl.registerHandler ("Language", function(data) {
+			languageNode.innerHTML = data;
+		})
+	}
+
+	function language (){
+		HybridControl.push("language.html")
+	}
 </script>

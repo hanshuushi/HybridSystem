@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select Language</title>
+	<meta name="LHS-Bridge" navigation-hidden="false" background-color="#EBEBF1" statusbar-style="Dark"/>
+	<script type="text/javascript" src="hybrid.js"></script>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="fakeuikit.css">
+</head>
+<body>
+
+<ul>
+	<li onclick="select('English')">English</li>
+	<li class="line"></li>
+	<li onclick="select('Chinese')">Chinese</li>
+	<li class="line"></li>
+	<li onclick="select('Japanese')">Japanese</li>
+	<li class="line"></li>
+	<li onclick="select('French')">French</li>
+	<li class="line"></li>
+	<li onclick="select('Italian')">Italian</li>
+	<li class="line"></li>
+	<li onclick="select('Korean')">Korean</li>
+</ul>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function select(name) {
+		HybridControl.callHandler("Language", name)
+
+		HybridControl.pop()
+	}
+</script>

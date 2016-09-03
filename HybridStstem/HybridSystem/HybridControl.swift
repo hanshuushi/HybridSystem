@@ -74,6 +74,7 @@ private class HybridControlNotificationManager {
     }
     
     func callHandler(name:String, data:AnyObject) {
+        print(notifications)
         for notification in notifications {
             if notification.name == name {
                 notification.control.callHandler(name, data: data)
@@ -186,6 +187,7 @@ class HybridControl : NSObject {
         
         // Register Handler
         bridge.registerHandler("LHS-RegisterHandler") { [unowned self](data, callBack) in
+            
             guard let name = data as? String else {
                 return
             }
@@ -195,6 +197,7 @@ class HybridControl : NSObject {
         
         // Call Handler
         bridge.registerHandler("LHS-CallHandler") { (data, callBack) in
+            
             guard let dict = data as? [String:AnyObject] else {
                 return
             }
@@ -203,7 +206,7 @@ class HybridControl : NSObject {
                 return
             }
             
-            let postData = data as? NSObject
+            let postData = dict["data"] as? NSObject
             
             HybridControlNotificationManager.shareInstance.callHandler(name, data: postData ?? "")
         }
