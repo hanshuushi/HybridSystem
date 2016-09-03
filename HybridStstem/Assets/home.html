@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta name="LHS-Bridge" navigation-hidden="false" background-color="#ffffff" />
+	<script type="text/javascript" src="hybrid.js"></script>
+	<link rel="stylesheet" type="text/css" href="base.css">
+</head>
+<body>
+<ul>
+	<li onclick="push()">Push Navigation Controller</li>
+	<li onclick="select()">Select Navigation Style</li>
+	<li onclick="light()">Light Statusbar Style</li>
+	<li onclick="hide()">Hide Statusbar Style</li>
+	<li onclick="present()">Present New Controller</li>
+</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+function push() {
+	HybridControl.push("push&pop.html")
+}
+
+function select() {
+	HybridControl.push("navigationstyle.html")
+}
+
+function light() {
+	HybridControl.push("statusbar.html")
+}
+
+function hide() {
+	HybridControl.push("hidestatusbar.html")
+}
+
+function present() {
+	HybridControl.present("present.html")
+}
+
+var ready = function(){
+	// hybrid.
+}
+</script>

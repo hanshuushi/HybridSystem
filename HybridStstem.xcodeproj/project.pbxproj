@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F18236271D70220800C8ABCA /* HybridControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18236261D70220800C8ABCA /* HybridControl.swift */; };
+		F18236291D7027B500C8ABCA /* HybridWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18236281D7027B500C8ABCA /* HybridWebViewController.swift */; };
+		F182362D1D70463300C8ABCA /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = F182362C1D70463300C8ABCA /* Assets */; };
+		F1DA71981D6AC5C800122A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71971D6AC5C800122A7B /* AppDelegate.swift */; };
+		F1DA719F1D6AC5C800122A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DA719E1D6AC5C800122A7B /* Assets.xcassets */; };
+		F1DA71A21D6AC5C800122A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DA71A01D6AC5C800122A7B /* LaunchScreen.storyboard */; };
+		F1DA71AD1D6AC5C800122A7B /* HybridStstemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71AC1D6AC5C800122A7B /* HybridStstemUITests.swift */; };
+		F1DA71C01D6AC89800122A7B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71B91D6AC89800122A7B /* WebViewJavascriptBridge.m */; };
+		F1DA71C11D6AC89800122A7B /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71BB1D6AC89800122A7B /* WebViewJavascriptBridge_JS.m */; };
+		F1DA71C21D6AC89800122A7B /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71BD1D6AC89800122A7B /* WebViewJavascriptBridgeBase.m */; };
+		F1DA71C31D6AC89800122A7B /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71BF1D6AC89800122A7B /* WKWebViewJavascriptBridge.m */; };
+		F1DA71D51D6ACBA400122A7B /* HybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DA71D11D6ACBA400122A7B /* HybridViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1DA71A91D6AC5C800122A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1DA718C1D6AC5C700122A7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1DA71931D6AC5C700122A7B;
+			remoteInfo = HybridStstem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F18236261D70220800C8ABCA /* HybridControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HybridControl.swift; path = HybridSystem/HybridControl.swift; sourceTree = "<group>"; };
+		F18236281D7027B500C8ABCA /* HybridWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HybridWebViewController.swift; path = HybridSystem/HybridWebViewController.swift; sourceTree = "<group>"; };
+		F182362C1D70463300C8ABCA /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		F1DA71941D6AC5C800122A7B /* HybridStstem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridStstem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DA71971D6AC5C800122A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1DA719E1D6AC5C800122A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1DA71A11D6AC5C800122A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1DA71A31D6AC5C800122A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1DA71A81D6AC5C800122A7B /* HybridStstemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridStstemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DA71AC1D6AC5C800122A7B /* HybridStstemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridStstemUITests.swift; sourceTree = "<group>"; };
+		F1DA71AE1D6AC5C800122A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1DA71B81D6AC89800122A7B /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		F1DA71B91D6AC89800122A7B /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		F1DA71BA1D6AC89800122A7B /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		F1DA71BB1D6AC89800122A7B /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		F1DA71BC1D6AC89800122A7B /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		F1DA71BD1D6AC89800122A7B /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		F1DA71BE1D6AC89800122A7B /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		F1DA71BF1D6AC89800122A7B /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		F1DA71C91D6AC93F00122A7B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		F1DA71D11D6ACBA400122A7B /* HybridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HybridViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1DA71911D6AC5C700122A7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DA71A51D6AC5C800122A7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F18236251D7021EF00C8ABCA /* HybridSystem */ = {
+			isa = PBXGroup;
+			children = (
+				F18236261D70220800C8ABCA /* HybridControl.swift */,
+				F18236281D7027B500C8ABCA /* HybridWebViewController.swift */,
+			);
+			name = HybridSystem;
+			sourceTree = "<group>";
+		};
+		F1DA718B1D6AC5C700122A7B = {
+			isa = PBXGroup;
+			children = (
+				F1DA71961D6AC5C800122A7B /* HybridStstem */,
+				F1DA71AB1D6AC5C800122A7B /* HybridStstemUITests */,
+				F1DA71951D6AC5C800122A7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1DA71951D6AC5C800122A7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA71941D6AC5C800122A7B /* HybridStstem.app */,
+				F1DA71A81D6AC5C800122A7B /* HybridStstemUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1DA71961D6AC5C800122A7B /* HybridStstem */ = {
+			isa = PBXGroup;
+			children = (
+				F182362C1D70463300C8ABCA /* Assets */,
+				F1DA71CA1D6ACA3400122A7B /* Dependence */,
+				F1DA71CB1D6ACA6800122A7B /* Support Refer */,
+			);
+			path = HybridStstem;
+			sourceTree = "<group>";
+		};
+		F1DA71AB1D6AC5C800122A7B /* HybridStstemUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA71AC1D6AC5C800122A7B /* HybridStstemUITests.swift */,
+				F1DA71AE1D6AC5C800122A7B /* Info.plist */,
+			);
+			path = HybridStstemUITests;
+			sourceTree = "<group>";
+		};
+		F1DA71B71D6AC89800122A7B /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA71B81D6AC89800122A7B /* WebViewJavascriptBridge.h */,
+				F1DA71B91D6AC89800122A7B /* WebViewJavascriptBridge.m */,
+				F1DA71BA1D6AC89800122A7B /* WebViewJavascriptBridge_JS.h */,
+				F1DA71BB1D6AC89800122A7B /* WebViewJavascriptBridge_JS.m */,
+				F1DA71BC1D6AC89800122A7B /* WebViewJavascriptBridgeBase.h */,
+				F1DA71BD1D6AC89800122A7B /* WebViewJavascriptBridgeBase.m */,
+				F1DA71BE1D6AC89800122A7B /* WKWebViewJavascriptBridge.h */,
+				F1DA71BF1D6AC89800122A7B /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		F1DA71CA1D6ACA3400122A7B /* Dependence */ = {
+			isa = PBXGroup;
+			children = (
+				F18236251D7021EF00C8ABCA /* HybridSystem */,
+				F1DA71CF1D6ACBA400122A7B /* HybridViewController */,
+				F1DA71B71D6AC89800122A7B /* WebViewJavascriptBridge */,
+			);
+			name = Dependence;
+			sourceTree = "<group>";
+		};
+		F1DA71CB1D6ACA6800122A7B /* Support Refer */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA71971D6AC5C800122A7B /* AppDelegate.swift */,
+				F1DA71C91D6AC93F00122A7B /* Bridging-Header.h */,
+				F1DA719E1D6AC5C800122A7B /* Assets.xcassets */,
+				F1DA71A01D6AC5C800122A7B /* LaunchScreen.storyboard */,
+				F1DA71A31D6AC5C800122A7B /* Info.plist */,
+			);
+			name = "Support Refer";
+			sourceTree = "<group>";
+		};
+		F1DA71CF1D6ACBA400122A7B /* HybridViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA71D11D6ACBA400122A7B /* HybridViewController.swift */,
+			);
+			path = HybridViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1DA71931D6AC5C700122A7B /* HybridStstem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DA71B11D6AC5C800122A7B /* Build configuration list for PBXNativeTarget "HybridStstem" */;
+			buildPhases = (
+				F1DA71901D6AC5C700122A7B /* Sources */,
+				F1DA71911D6AC5C700122A7B /* Frameworks */,
+				F1DA71921D6AC5C700122A7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HybridStstem;
+			productName = HybridStstem;
+			productReference = F1DA71941D6AC5C800122A7B /* HybridStstem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1DA71A71D6AC5C800122A7B /* HybridStstemUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DA71B41D6AC5C800122A7B /* Build configuration list for PBXNativeTarget "HybridStstemUITests" */;
+			buildPhases = (
+				F1DA71A41D6AC5C800122A7B /* Sources */,
+				F1DA71A51D6AC5C800122A7B /* Frameworks */,
+				F1DA71A61D6AC5C800122A7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1DA71AA1D6AC5C800122A7B /* PBXTargetDependency */,
+			);
+			name = HybridStstemUITests;
+			productName = HybridStstemUITests;
+			productReference = F1DA71A81D6AC5C800122A7B /* HybridStstemUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1DA718C1D6AC5C700122A7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "舟弛 范";
+				TargetAttributes = {
+					F1DA71931D6AC5C700122A7B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F1DA71A71D6AC5C800122A7B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F1DA71931D6AC5C700122A7B;
+					};
+				};
+			};
+			buildConfigurationList = F1DA718F1D6AC5C700122A7B /* Build configuration list for PBXProject "HybridStstem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1DA718B1D6AC5C700122A7B;
+			productRefGroup = F1DA71951D6AC5C800122A7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1DA71931D6AC5C700122A7B /* HybridStstem */,
+				F1DA71A71D6AC5C800122A7B /* HybridStstemUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1DA71921D6AC5C700122A7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DA71A21D6AC5C800122A7B /* LaunchScreen.storyboard in Resources */,
+				F182362D1D70463300C8ABCA /* Assets in Resources */,
+				F1DA719F1D6AC5C800122A7B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DA71A61D6AC5C800122A7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1DA71901D6AC5C700122A7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DA71C11D6AC89800122A7B /* WebViewJavascriptBridge_JS.m in Sources */,
+				F18236271D70220800C8ABCA /* HybridControl.swift in Sources */,
+				F18236291D7027B500C8ABCA /* HybridWebViewController.swift in Sources */,
+				F1DA71D51D6ACBA400122A7B /* HybridViewController.swift in Sources */,
+				F1DA71C01D6AC89800122A7B /* WebViewJavascriptBridge.m in Sources */,
+				F1DA71981D6AC5C800122A7B /* AppDelegate.swift in Sources */,
+				F1DA71C21D6AC89800122A7B /* WebViewJavascriptBridgeBase.m in Sources */,
+				F1DA71C31D6AC89800122A7B /* WKWebViewJavascriptBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DA71A41D6AC5C800122A7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DA71AD1D6AC5C800122A7B /* HybridStstemUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1DA71AA1D6AC5C800122A7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1DA71931D6AC5C700122A7B /* HybridStstem */;
+			targetProxy = F1DA71A91D6AC5C800122A7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F1DA71A01D6AC5C800122A7B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1DA71A11D6AC5C800122A7B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1DA71AF1D6AC5C800122A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1DA71B01D6AC5C800122A7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1DA71B21D6AC5C800122A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HybridStstem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanshuushi.latte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HybridStstem/Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F1DA71B31D6AC5C800122A7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HybridStstem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanshuushi.latte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HybridStstem/Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F1DA71B51D6AC5C800122A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HybridStstemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Hanshuushi.HybridStstemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HybridStstem;
+			};
+			name = Debug;
+		};
+		F1DA71B61D6AC5C800122A7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HybridStstemUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Hanshuushi.HybridStstemUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HybridStstem;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1DA718F1D6AC5C700122A7B /* Build configuration list for PBXProject "HybridStstem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DA71AF1D6AC5C800122A7B /* Debug */,
+				F1DA71B01D6AC5C800122A7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1DA71B11D6AC5C800122A7B /* Build configuration list for PBXNativeTarget "HybridStstem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DA71B21D6AC5C800122A7B /* Debug */,
+				F1DA71B31D6AC5C800122A7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1DA71B41D6AC5C800122A7B /* Build configuration list for PBXNativeTarget "HybridStstemUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DA71B51D6AC5C800122A7B /* Debug */,
+				F1DA71B61D6AC5C800122A7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1DA718C1D6AC5C700122A7B /* Project object */;
+}

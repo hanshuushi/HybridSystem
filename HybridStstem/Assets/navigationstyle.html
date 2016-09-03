@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Style</title>
+	<meta name="LHS-Bridge" navigation-hidden="false" background-color="#ffffff" />
+	<script type="text/javascript" src="hybrid.js"></script>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<style type="text/css">
+		li {
+			border-radius: 0px;
+			font-weight: bold;
+			height: 44px;
+			line-height: 44px;
+			margin: 20px 0px 0px 0px;
+			position: relative;
+		}
+
+		li>span {
+			float: left;
+			position: absolute;
+			left: 10px;
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li onclick="select('#21cea8', '#fdfdfd', '#fdfdfd')" style="background-color: #21cea8;color: #fdfdfd"><span style="color: #fdfdfd">&ltBack</span>Title</li>
+	<li onclick="select('#00bcd4', '#fdfdfd', '#fdfdfd')" style="background-color: #00bcd4;color: #fdfdfd"><span style="color: #fdfdfd">&ltBack</span>Title</li>
+	<li onclick="select('#ffeb3b', '#607d8b', '#607d8b')" style="background-color: #ffeb3b;color: #607d8b"><span style="color: #607d8b">&ltBack</span>Title</li>
+	<li onclick="select('#ffeb3b38', '#607d8b', '#000000')" style="background-color: #ffeb3b38;color: #607d8b"><span style="color: #000000">&ltBack</span>Title</li>
+</ul>
+</body>
+</html>
+<script type="text/javascript">
+function select(backgroudColor, fontColor, tintColor) {
+	HybridControl.setNavigationStyle(backgroudColor, fontColor, tintColor)
+}
+</script>

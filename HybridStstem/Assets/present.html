@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Present</title>
+	<meta name="LHS-Bridge" navigation-hidden="false" background-color="#ffffff" />
+	<script type="text/javascript" src="hybrid.js"></script>
+	<link rel="stylesheet" type="text/css" href="base.css">
+</head>
+<body>
+<ul>
+	<li onclick="push()">Push a new controller in this navigation</li>
+
+	<li onclick="dismiss()">Dismiss</li>
+</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+function push() {
+	HybridControl.push("push&pop.html")
+}
+
+function dismiss () {
+	HybridControl.dismiss()
+}
+</script>

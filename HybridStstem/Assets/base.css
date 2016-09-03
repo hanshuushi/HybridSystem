@@ -1,0 +1,19 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+ul {
+	color: #595959;
+	padding: 0px;
+	margin: 0px;
+	line-height: 50px;
+	text-align: center;
+}
+
+li{
+	height: 50px;
+	background-color: #f3f3f3;
+	border-radius: 5px;
+	margin: 5px 10px;
+}

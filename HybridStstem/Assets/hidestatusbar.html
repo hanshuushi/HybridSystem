@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="LHS-Bridge" navigation-hidden="true" background-color="#000000" statusbar-style="Hidden"/>
+	<script type="text/javascript" src="hybrid.js"></script>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<style type="text/css">
+		body {
+			background-image: url(http://i.img16888.com/picLib/2013/01/2013011414512432.jpg);
+		}
+
+		div {
+		    height: 50px;
+		    width: 150px;
+		    text-align: center;
+		    line-height: 50px;
+		    display: inline-block;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    border-radius: 15px;
+		    border: 1px solid white;
+		    margin: -25px 0px 0px -75px;
+		    color: white;
+		}
+	</style>
+</head>
+<body>
+
+<div onclick="HybridControl.pop()">
+	Press This To Pop
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function pop() {
+	// body...
+	HybridControl.pop()
+}
+</script>
