@@ -144,7 +144,13 @@ class HybridWebViewController: UIViewController, UIWebViewDelegate {
     var requestCallBack:LoadUrlCallBack? = nil
     
     func loadUrl(urlString:String, callBack:LoadUrlCallBack?=nil) {
-        guard let url = NSURL(string: HybridControl.BasicUrl + urlString) else {
+        guard let encodingURLString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) else {
+            callBack?(success: false)
+            
+            return
+        }
+        
+        guard let url = NSURL(string: HybridControl.BasicUrl + encodingURLString) else {
             callBack?(success: false)
             
             return
