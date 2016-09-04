@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select Country</title>
+	<meta name="LHS-Bridge" navigation-hidden="false" background-color="#EBEBF1" statusbar-style="Dark"/>
+	<script type="text/javascript" src="hybrid.js"></script>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="fakeuikit.css">
+</head>
+<body>
+
+<ul>
+	<li onclick="select('USA')">USA</li>
+	<li class="line"></li>
+	<li onclick="select('UK')">UK</li>
+	<li class="line"></li>
+	<li onclick="select('China')">China</li>
+	<li class="line"></li>
+	<li onclick="select('Japan')">Japan</li>
+	<li class="line"></li>
+	<li onclick="select('Tailand')">Tailand</li>
+	<li class="line"></li>
+	<li onclick="select('India')">India</li>
+</ul>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function select(name) {
+		HybridControl.callHandler("Country", {name:name})
+
+		HybridControl.pop()
+	}
+</script>
