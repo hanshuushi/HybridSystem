@@ -9,6 +9,10 @@ function setupWebViewJavascriptBridge(callback) {
     setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
 }
 
+function _isFunction(obj){
+    return Object.prototype.toString.call(obj)==='[object Function]'
+}
+
 var HybridControl = {
 
 }
@@ -90,7 +94,7 @@ setupWebViewJavascriptBridge(function(bridge) {
 
 		var callBack = HybridControl.handlerCollection[name]
 
-		callBack(postData)
+		if (_isFunction(callBack)) { callBack(postData) }
 	})
 
 	HybridControl.registerHandler = function(name, handler) {
@@ -113,10 +117,41 @@ setupWebViewJavascriptBridge(function(bridge) {
 	}
 
 	// Set Navigation Left Item
+	bridge.registerHandler("LHS-NavigationLeftItemPressed", function(data, callBack) {
+		if (_isFunction(HybridControl.navigationLeftItemHandler)) {
+			HybridControl.navigationLeftItemHandler()
+		}
+	})
+
 	HybridControl.setNavigationLeftItem = function(itemName, callBack) {
 		HybridControl.navigationLeftItemHandler = callBack
 
-		bridge.callHandler("LHS-NavigationSetLeftItem", itemName)
+		bridge.callHandler("LHS-SetNavigationLeftItem", itemName)
+	}
+
+	HybridControl.removeNavigationLeftItem = function() {
+		delete HybridControl.navigationLeftItemHandler
+
+		bridge.callHandler("LHS-RemoveNavigationLeftItem")
+	}
+
+	// Set Navigation Right Item
+	bridge.registerHandler("LHS-NavigationRightItemPressed", function(data, callBack) {
+		if (_isFunction(HybridControl.navigationRightItemHandler)) {
+			HybridControl.navigationRightItemHandler()
+		}
+	})
+
+	HybridControl.setNavigationRightItem = function(itemName, callBack) {
+		HybridControl.navigationRightItemHandler = callBack
+
+		bridge.callHandler("LHS-SetNavigationRightItem", itemName)
+	}
+
+	HybridControl.removeNavigationRightItem = function() {
+		delete HybridControl.navigationRightItemHandler
+
+		bridge.callHandler("LHS-RemoveNavigationRightItem")
 	}
 
 	// Set Ready

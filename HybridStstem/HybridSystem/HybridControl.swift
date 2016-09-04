@@ -220,7 +220,51 @@ class HybridControl : NSObject {
             HybridControlNotificationManager.shareInstance.removeHandler(handlerName: name, hybridControl: self)
         }
         
+        // Set Navigation Left Handler
+        bridge.registerHandler("LHS-SetNavigationLeftItem") { [unowned self](data, callBack) in
+            guard let title = data as? String else {
+                return
+            }
+            
+            self.webViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(
+                title: title,
+                style: .Plain,
+                target: self,
+                action: #selector(HybridControl.leftNavigationItemPressed)
+            )
+        }
+        
+        bridge.registerHandler("LHS-RemoveNavigationLeftItem") { [unowned self](data, callBack) in
+            self.webViewController.navigationItem.leftBarButtonItem = nil
+        }
+        
+        // Set Navigation Right Handler
+        bridge.registerHandler("LHS-SetNavigationRightItem") { [unowned self](data, callBack) in
+            guard let title = data as? String else {
+                return
+            }
+            
+            self.webViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(
+                title: title,
+                style: .Plain,
+                target: self,
+                action: #selector(HybridControl.rightNavigationItemPressed)
+            )
+        }
+        
+        bridge.registerHandler("LHS-RemoveNavigationRightItem") { [unowned self](data, callBack) in
+            self.webViewController.navigationItem.rightBarButtonItem = nil
+        }
+        
         bridge.setWebViewDelegate(self.webViewController)
+    }
+    
+    func leftNavigationItemPressed() {
+        bridge.callHandler("LHS-NavigationLeftItemPressed", data: nil)
+    }
+    
+    func rightNavigationItemPressed() {
+        bridge.callHandler("LHS-NavigationRightItemPressed", data: nil)
     }
     
     func callHandler(name:String, data:AnyObject) {

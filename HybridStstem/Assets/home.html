@@ -14,6 +14,7 @@
 	<li onclick="hide()">Hide Statusbar Style</li>
 	<li onclick="present()">Present New Controller</li>
 	<li onclick="register()">Register & Call Handler </li>
+	<li onclick="navigationItem()">Set Navigation Bar Item </li>
 </ul>
 </body>
 </html>
@@ -41,6 +42,10 @@ function present() {
 
 function register() {
 	HybridControl.push("registerHandler.html")
+}
+
+function navigationItem() {
+	HybridControl.present("navigationItem.html")
 }
 
 var ready = function(){

@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Form</title>
 	<meta name="LHS-Bridge" navigation-hidden="false" background-color="#ffffff" />
 	<script type="text/javascript" src="hybrid.js"></script>
 	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="fakeuikit.css">
 </head>
 <body>
+<ul>
+	<li>Email:<input id="eml" type="text" name="email" placeholder="input your email"></li>
+	<li class="line"></li>
+	<li>Password:<input id="psw" type="password" name="password" placeholder="input your password"></li>
+</ul>
 </body>
 </html>
 
 <script type="text/javascript">
+	var emailNode = document.getElementById("eml")
 
+	var passwordNode = document.getElementById("psw")
+
+	HybridControl.ready = function(){
+		HybridControl.setNavigationLeftItem("Close", function(){
+			HybridControl.dismiss()
+		})
+
+		HybridControl.setNavigationRightItem("Save", function(){
+			if (emailNode.value === "") {
+				alert ("Input Your Email Please!")
+				return
+			}
+
+			if (passwordNode.value === "") {
+				alert ("Input Your Password Please!")
+				return
+			}
+
+			alert ("Save Success")
+			
+			HybridControl.dismiss()
+		})
+	}
 </script>
