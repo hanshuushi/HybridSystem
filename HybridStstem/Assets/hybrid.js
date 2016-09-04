@@ -112,6 +112,14 @@ setupWebViewJavascriptBridge(function(bridge) {
 		bridge.callHandler("LHS-RemoveHandler", name)
 	}
 
+	// Set Navigation Left Item
+	HybridControl.setNavigationLeftItem = function(itemName, callBack) {
+		HybridControl.navigationLeftItemHandler = callBack
+
+		bridge.callHandler("LHS-NavigationSetLeftItem", itemName)
+	}
+
+	// Set Ready
 	if (HybridControl.ready) {
 		HybridControl.ready()
 	}

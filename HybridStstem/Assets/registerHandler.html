@@ -12,7 +12,7 @@
 <ul>
 	<li onclick="language()">Select Your Language<span id="language"></span><label class="arrow" /></li>
 	<li class="line"></li>
-	<li>Select Your Country<span id="country" >USA</span><label class="arrow" /></li>
+	<li onclick="country()">Select Your Country<span id="country" >USA</span><label class="arrow" /></li>
 </ul>
 
 </body>
@@ -27,18 +27,21 @@
 
 	countryNode.innerHTML = "USA";
 
-
-	// HybridControl.registerHandler ("Country", function(data) {
-	// 	countryNode.innerHTML = data;
-	// })
-
 	HybridControl.ready = function(){
 		HybridControl.registerHandler ("Language", function(data) {
 			languageNode.innerHTML = data;
+		})
+
+		HybridControl.registerHandler ("Country", function(data) {
+			countryNode.innerHTML = data.name;
 		})
 	}
 
 	function language (){
 		HybridControl.push("language.html")
+	}
+
+	function country (){
+		HybridControl.push("country.html")
 	}
 </script>
