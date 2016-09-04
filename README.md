@@ -16,10 +16,11 @@ HybridSystem是在iOS中通过WebView去载入Web页面来实现开发的一种�
 
 ## HybridSystem目前计划的功能
 * 界面切换（Push * Pop、Present & Dismiss）[已完成]
-* 注册Handler [施工中]
+* 注册Handler [已完成]
 * 原生UIKit的界面风格修改 [已完成]
-* UINavigationBar的Item添加设置 [施工中]
-* 调用硬件功能（IAP、Touch ID、3D Touch等等）[施工中]
+* UINavigationBar的Item添加设置 [已完成]
+* 调用硬件功能（IAP、Touch ID、3D Touch等等）[计划中]
+* Item图片加载 [计划中]
 
 ## HybridSystem使用手册
 
